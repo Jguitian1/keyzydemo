@@ -54,18 +54,18 @@
 
   }
   .box1:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   .box2:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 
   }
   .box3:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   .home:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
 

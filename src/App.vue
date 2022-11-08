@@ -111,4 +111,23 @@ nav a.router-link-exact-active svg{
   --cui-btn-disabled-bg: #4f5d73;
   --cui-btn-disabled-border-color: #4f5d73;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #2D2D2F; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
 </style>

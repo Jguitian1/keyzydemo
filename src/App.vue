@@ -56,6 +56,8 @@ Market</router-link>
   margin: 0px;
   width: 200px;
   height: 100vh;
+  position: fixed;
+
 }
 body{
   margin:0;
@@ -63,11 +65,13 @@ body{
   
 
 }
+
+
 nav {
   background-color: #1D1D1F;
   display: grid;
   text-decoration: none;
-  position: absolute;
+  position: fixed;
   z-index: 10;
 }
 

@@ -1,4 +1,6 @@
 <template>
+  <router-view/>
+  <router-link to="/buy"> 
   <div class="home">
     <div class = "textArea">
       <p> Castle Crashers </p>
@@ -7,19 +9,20 @@
         <p> Buy </p>
       </div>
     </div>
-    
   </div>
+</router-link>
+
+
   <div class = "threeBox">
-    
     <div class = "box1">
-      <div class="img-description">
+      <span class="img-description">
         <h2 style="color: white; display:grid; justify-content: center; ">
           Dishonred 2
         </h2>
         <p style="padding: 5px; color: white; text-align:center; font-family: 'Inter', sans-serif;">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciunt atque. Facere magnam sed laboriosam voluptatum, expedita nemo fugit ipsa ullam tempore autem
         </p>
-      </div>  
+      </span>  
     </div>
     <div class = "textContainer1">
       
@@ -30,14 +33,14 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciun
     </div>
 
     <div class = "box2">
-      <div class="img-description">
+      <span class="img-description">
         <h2 style="color: white; display:grid; justify-content: center; ">
           CyberPunk 2077
         </h2>
         <p style="padding: 5px; color: white; text-align:center; font-family: 'Inter', sans-serif;">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciunt atque. Facere magnam sed laboriosam voluptatum, expedita nemo fugit ipsa ullam tempore autem
         </p>
-      </div>  
+      </span>  
     </div>
     <div class = "textContainer2">
       <span>CyberPunk 2077</span><br>
@@ -49,14 +52,14 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciun
     </div>
 
     <div class = "box3">
-      <div class="img-description">
+      <span class="img-description">
         <h2 style="color: white; display:grid; justify-content: center; ">
           Rust
         </h2>
         <p style="padding: 5px; color: white; text-align:center; font-family: 'Inter', sans-serif;">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciunt atque. Facere magnam sed laboriosam voluptatum, expedita nemo fugit ipsa ullam tempore autem
         </p>
-      </div>  
+      </span>  
     </div>
     <div class = "textContainer3">
       <span>Rust</span><br>
@@ -68,10 +71,18 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciun
   </div>
 
 
-
 </template>
 
 <style scoped>
+
+div{
+  animation: fadeIn .5s;
+
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 .home{
   position: absolute;
   background-image: url( "../assets/castle.jpg");

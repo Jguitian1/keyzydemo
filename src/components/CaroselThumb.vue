@@ -33,24 +33,30 @@ export default {
                 images: [
                     {
                         id: '1',
-                        big: "http://localhost:8080/img/castle.b2fb5135.jpg",
-                        thumb: 'http://localhost:8080/img/castle.b2fb5135.jpg'
+                        big: "https://cdn.cloudflare.steamstatic.com/steam/apps/204360/ss_57cdabd9ae140e33c5551ee0088d1e5db11b4622.1920x1080.jpg?t=1666985972",
+                        thumb: 'https://cdn.cloudflare.steamstatic.com/steam/apps/204360/ss_57cdabd9ae140e33c5551ee0088d1e5db11b4622.1920x1080.jpg?t=1666985972'
                     },
                     {
                         id: '2',
-                        big: 'https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg',
-                        thumb: 'https://www.planetware.com/wpimages/2020/02/france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg'
+                        big: 'https://static.kinguin.net/cdn-cgi/image/w=1140,q=80,fit=scale-down,f=auto/media/category/2/-/2-1024_457.jpg',
+                        thumb: 'https://static.kinguin.net/cdn-cgi/image/w=1140,q=80,fit=scale-down,f=auto/media/category/2/-/2-1024_457.jpg'
                     },
                     {
                         id: '3',
-                        big: 'images/p3.jpeg',
-                        thumb: 'images/thumbs/p3.jpeg'
+                        big: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_9cf7ff6ba267da33e140f66c29f50fd2ed391da2.1920x1080.jpg?t=1666985972',
+                        thumb: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_9cf7ff6ba267da33e140f66c29f50fd2ed391da2.1920x1080.jpg?t=1666985972'
                     },
                     {
                         id: '4',
-                        big: 'images/p4.jpeg',
-                        thumb: 'images/thumbs/p4.jpeg'
-                    }
+                        big: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_a6a154f004bd7d0c3c7c1a0b378216ce0e8c8dd2.1920x1080.jpg?t=1666985972',
+                        thumb: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_a6a154f004bd7d0c3c7c1a0b378216ce0e8c8dd2.1920x1080.jpg?t=1666985972'
+                    },
+                    {
+                        id: '5',
+                        big: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_2f53c16cb83d492cae0421ca090d2591f863e448.1920x1080.jpg?t=1666985972',
+                        thumb: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_2f53c16cb83d492cae0421ca090d2591f863e448.1920x1080.jpg?t=1666985972'
+                    },
+
                 ],
                 //Index of the active image on the images array
                 activeImage: 0
@@ -106,14 +112,13 @@ export default {
 .thumbnails {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 12.5px;
     height: 120px;
 }
 .thumbnail-image {
     display: flex;
     align-items: center;
     cursor: pointer;
-    padding: 2px;
     width: 150px;
     height: 120px;
 
@@ -158,13 +163,13 @@ export default {
 .actions > span.prev {
     margin-left: 5px;
     background-color: white;
-    height: 20px;
+    height: 70px;
     width: 20px;
 }
 .actions > span.next {
     margin-right: 5px;
     background-color: white;
-    height: 20px;
+    height: 70px;
     width: 20px;
 }
 .actions > span:hover {

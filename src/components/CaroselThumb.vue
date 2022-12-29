@@ -128,7 +128,6 @@ export default {
     height: 100px;
     transition: all 250ms;
 }
-.thumbnail-image:hover > img, 
 .thumbnail-image.active > img {
     opacity: 0.6;
     box-shadow: 2px 2px 6px 1px rgba(0,0,0, 0.5);

@@ -201,7 +201,7 @@ div{
     background-image: url( "../assets/dis.jpg");
     background-repeat: no-repeat;
     background-size: cover;    
-    top: 80%; right: 58.4%;
+    top: 75%; right: 58.4%;
     width: 250px;
     height: 230px;
     border-radius: 4px;
@@ -212,7 +212,7 @@ div{
     background-image: url( "../assets/cyb.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    top: 80%; 
+    top: 75%; 
     right:31%;
     width: 250px;
     height: 230px;
@@ -225,7 +225,7 @@ div{
     background-image: url( "../assets/rust.jpg");
     background-size: cover;
     background-repeat: no-repeat;    
-    top: 80%; left: 75%;
+    top: 75%; left: 75%;
     width: 250px;
     height: 230px;
     border-radius: 4px;
@@ -294,7 +294,7 @@ div{
   }
   .textContainer1{
     position: absolute;
-    top: 110%; right: 58.4%;
+    top: 105%; right: 58.4%;
     width: 250px;
     height: 125px;
     color: white;
@@ -303,7 +303,7 @@ div{
   }
   .textContainer2{
     position: absolute;
-    top: 110%;
+    top: 105%;
     right:31%;
     width: 250px;
     height: 125px;
@@ -313,7 +313,7 @@ div{
   }
   .textContainer3{
     position: absolute;
-    top: 110%; left: 75%;
+    top: 105%; left: 75%;
     width: 250px;
     height: 125px;
     color: white;

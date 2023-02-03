@@ -100,7 +100,6 @@ export default {
 <style scoped>
 .card-carousel {
     user-select: none;
-    position: absolute;
     left: 300px; top: 50px;
     transition-timing-function: ease-in;
     animation: fadeIn .5s;
@@ -133,19 +132,15 @@ export default {
     box-shadow: 2px 2px 6px 1px rgba(0,0,0, 0.5);
 }
 .card-img {
-    position: relative;
     margin-bottom: 15px;
 }
 .card-img > img {
-    display: block;
-    margin: 0 auto;
     width: 800px;
     height: 500px;
 }
 .actions {
     font-size: 1.5em;
     height: 40px;
-    position: absolute;
     top: 50%;
     margin-top: -20px;
     width: 100%;
@@ -160,14 +155,17 @@ export default {
     font-size: 45px;
 }
 .actions > span.prev {
-    margin-left: 5px;
-    background-color: white;
+  position: relative;
+  margin-bottom: 500px;
+  background-color: white;
     height: 70px;
     width: 20px;
 }
 .actions > span.next {
-    margin-right: 5px;
-    background-color: white;
+  position: relative;
+  margin-bottom: 500px;
+
+  background-color: white;
     height: 70px;
     width: 20px;
 }

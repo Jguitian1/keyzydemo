@@ -10,6 +10,8 @@ export default {
 </script>
 
 <template>
+
+  <div class="cont">
     <span class = "title"> Castle Crashers</span>
     <CaroselThumb/>
     <div class = "textArea">
@@ -24,20 +26,28 @@ export default {
 
         
     </div>
+  </div>
 
 </template>
 
 <style scoped>
+
+.cont{
+  margin-left: 225px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .title{
+    margin-right: 530px;
     color: white;
     font-size: 35px;
-    position: absolute;
     left: 300px;
     font-family: 'Rubik', sans-serif;
 }
 
 .textArea{ 
-    position: absolute;
     left: 300px; top: 700px;
     transition-timing-function: ease-in;
     animation: fadeIn .5s;
@@ -49,8 +59,6 @@ export default {
 .buttonSpace{
     background-color: #3D3D3F;
     width: 800px;
-    position: absolute;
-    left: 300px; top: 800px;
     transition-timing-function: ease-in;
     animation: fadeIn .5s;
     width: 800px;
@@ -58,6 +66,7 @@ export default {
     color: #eae6e5;
     border-radius: 4px;
     display: inline;
+    margin-bottom: 25px;
 
 }
 .buttonSpace > span{

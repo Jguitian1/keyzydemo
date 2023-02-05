@@ -46,6 +46,7 @@
   transition: 0.3s;
   background-image: url("imgs/corn.jpg");
   background-position: center; /* Center the image */
+  background-size:cover;
 }
 
 body{

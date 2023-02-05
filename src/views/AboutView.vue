@@ -9,7 +9,7 @@
         <p style="font-size: 11px; margin-top: 10px"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac risus ac quam cursus egestas sed in orci. Duis tempor libero nulla.  Ut eu interdum felis. Fusce quis lobortis lorem, eget consequat ligula. Etiam at porta neque. Sed quis tincidunt justo. Fusce lorem nisi.</p>
         <div style="height: 10px;width: 10px; margin-left: 25px"/>
         <div class="launch">
-          <img src = "./imgs/play.svg" style="margin-left: 3px;"/>
+          <img src = "./imgs/play.svg" style="margin-left: 3px; height:25px;"/>
           <p style="margin-top: 5px; font-size: 14px; margin-left: 4px;"> LAUNCH </p>
         </div>
       </div>
@@ -63,6 +63,7 @@
       transition: 0.3s;
       background-image: url("imgs/corn.jpg");
       background-position: 0px; /* Center the image */
+      background-size:cover;
 
     }
     body{
@@ -72,11 +73,11 @@
     .launch{
       width: 100px;
       display: flex;
+      align-items: center;
       height: 35px;
       border-radius: 15px;
       background-color: #266DD3;
       margin-left: auto;
-      transform: translateX(-25px); /* 10px to left */
       padding-right: 100px;
 
     }

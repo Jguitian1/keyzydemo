@@ -12,6 +12,45 @@
   </div>
   </router-link>
 
+  <div class="pillArea">
+    <div class = "pill">
+      
+    </div>
+    <div class = "pill">
+      
+    </div>
+    <div class = "pill">
+      
+    </div>
+    <div class = "pill">
+      
+    </div>
+    <div class = "pill">
+      
+    </div>
+    <div class = "pill">
+      
+    </div>
+    <div class = "pill">
+      
+    </div>
+    <div class = "pill">
+      
+    </div>
+    <div class = "pill">
+      
+    </div>
+    <div class = "pill">
+      
+    </div>
+    <div class = "pill">
+      
+    </div>
+    <div class = "pill">
+      
+    </div>
+  </div>
+
   <div class="boxcont">
   <div class = "threeBox">
     <div class = "box1">
@@ -78,73 +117,16 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciun
       </div>
     </div>
   </div>
-  <div class = "sale">
-
-  </div>
-  <div class="boxcont">
-    <div class = "threeBox">
-      <div class = "box1">
-      <span class="img-description">
-        <h2 style="color: white; display:grid; justify-content: center; ">
-          Dishonred 2
-        </h2>
-        <p style="padding: 5px; color: white; text-align:center; font-family: 'Inter', sans-serif;">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciunt atque. Facere magnam sed laboriosam voluptatum, expedita nemo fugit ipsa ullam tempore autem
-        </p>
-      </span>
-      </div>
-
-
-      <div class = "box2">
-      <span class="img-description">
-        <h2 style="color: white; display:grid; justify-content: center; ">
-          CyberPunk 2077
-        </h2>
-        <p style="padding: 5px; color: white; text-align:center; font-family: 'Inter', sans-serif;">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciunt atque. Facere magnam sed laboriosam voluptatum, expedita nemo fugit ipsa ullam tempore autem
-        </p>
-      </span>
-      </div>
-
-
-      <div class = "box3">
-      <span class="img-description">
-        <h2 style="color: white; display:grid; justify-content: center; ">
-          Rust
-        </h2>
-        <p style="padding: 5px; color: white; text-align:center; font-family: 'Inter', sans-serif;">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciunt atque. Facere magnam sed laboriosam voluptatum, expedita nemo fugit ipsa ullam tempore autem
-        </p>
-      </span>
-      </div>
-
+  <div class ="saleCont">
+    <div class = "sale">
+      
     </div>
+    <div class = "stackedSale">
+        <div class = "stacked"></div>
+        <div class = "stacked"></div>
+        <div class = "stacked"></div>
+        <div class = "stacked"></div>
 
-
-  </div>
-
-  <div class = "textcont">
-    <div class = "textContainer1">
-
-      <span>Dishonred 2</span><br>
-      <div class = "button1">
-        <p> $39.99 </p>
-      </div>
-    </div>
-    <div class = "textContainer2">
-      <span>CyberPunk 2077</span><br>
-
-      <div class = "button1">
-
-        <p> $59.99 </p>
-      </div>
-    </div>
-    <div class = "textContainer3">
-      <span>Rust</span><br>
-
-      <div class = "button1">
-        <p> $39.99 </p>
-      </div>
     </div>
   </div>
 
@@ -154,15 +136,36 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciun
 
 
 <style scoped>
-
-.sale{
-  background-color: #D9D9D9;
+.pillArea{
   width: 900px;
-  height: 150px;
+  margin-top: 35px;
+  display: flex;
+  margin-left: 200px;
+  gap:12.5px
+}
+
+.pill{
+
+  background-color: #D9D9D9;
+  height: 25px;
+  width: 60px;
   border-radius: 15px;
+}
+.saleCont{
+  width: 900px;
+  display: flex;
+  height: 300px;
+
   margin-left: 200px;
   margin-bottom: 15px;
-  transition: .3s ease-in;
+}
+.sale{
+  background-color: #D9D9D9;
+  width: 695px;
+  margin-right: 5px;
+  height: inherit;
+  border-radius: 15px;
+  transition: .1s ease-in;
 }
 
 .sale:hover{
@@ -176,7 +179,19 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciun
   align-items: center;
 
 }
+.stackedSale{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 
+.stacked{
+  width: 200px;
+  height: 70px;
+  background-color: #D9D9D9;
+  border-radius: 15px;
+
+}
 .textcont{
   margin-left: 200px;
 
@@ -195,11 +210,12 @@ div{
 .home{
   margin-top: 25px;
   background-image: url("imgs/castle.jpg");
+  background-position: 0px;
   display: flex;
   flex-direction: column;
   background-size: cover;
   width: 900px;
-  height: 500px;
+  height: 300px;
   border-radius: 4px;
   transition: transform .2s;
   margin-left: 200px;
@@ -214,8 +230,8 @@ div{
   .textArea{
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 600px;
+    height: inherit;
+    width: inherit;
     align-self: end;
     background: linear-gradient(to left, transparent 0%, black 130%);
     border-radius: 4px;
@@ -226,7 +242,7 @@ div{
     margin-left: 25px;
     font-size: 25px;
     font-family: 'Rubik', sans-serif;
-    margin-top: 200px;
+    margin-top: 100px;
 
   }
   a{

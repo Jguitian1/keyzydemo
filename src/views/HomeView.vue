@@ -1,3 +1,69 @@
+<script>
+import { defineComponent } from 'vue'
+import { Carousel, Navigation, Slide } from 'vue3-carousel'
+
+import '../../node_modules/vue3-carousel/dist/carousel.css'
+
+export default defineComponent({
+  name: 'BreakPoints',
+  components: {
+    Carousel,
+    Slide,
+    Navigation,
+  },
+  data: () => ({
+    // carousel settings
+    settings: {
+      itemsToShow: 1,
+      snapAlign: 'center',
+    },
+    // breakpoints are mobile first
+    // any settings not specified will fallback to the carousel settings
+    breakpoints: {
+      // 700px and up
+      700: {
+        itemsToShow: 3.5,
+        snapAlign: 'center',
+      },
+      // 1024 and up
+      1024: {
+        itemsToShow: 4,
+        snapAlign: 'start',
+      },
+    },
+    images: [
+                    {
+                        id: '1',
+                        big: "https://cdn.cloudflare.steamstatic.com/steam/apps/204360/ss_57cdabd9ae140e33c5551ee0088d1e5db11b4622.1920x1080.jpg?t=1666985972",
+                        thumb: "https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg"
+                    },
+                    {
+                        id: '2',
+                        big: 'https://static.kinguin.net/cdn-cgi/image/w=1140,q=80,fit=scale-down,f=auto/media/category/2/-/2-1024_457.jpg',
+                        thumb: 'https://static-cdn.jtvnw.net/ttv-boxart/263490_IGDB-272x380.jpg'
+                    },
+                    {
+                        id: '3',
+                        big: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_9cf7ff6ba267da33e140f66c29f50fd2ed391da2.1920x1080.jpg?t=1666985972',
+                        thumb: 'https://image.api.playstation.com/vulcan/ap/rnd/202009/2918/1UfdyQmXpeSdoFE104sNkLd4.png'
+                    },
+                    {
+                        id: '4',
+                        big: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_a6a154f004bd7d0c3c7c1a0b378216ce0e8c8dd2.1920x1080.jpg?t=1666985972',
+                        thumb: 'https://store-images.s-microsoft.com/image/apps.13950.70702278257994163.eb8febd9-1124-4e74-9587-d5082fbfffb5.5422b74c-3e78-408f-8df6-9a88c288b704'
+                    },
+                    {
+                        id: '5',
+                        big: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_2f53c16cb83d492cae0421ca090d2591f863e448.1920x1080.jpg?t=1666985972',
+                        thumb: 'https://image.api.playstation.com/vulcan/ap/rnd/202206/0300/E2vZwVaDJbhLZpJo7Q10IyYo.png'
+                    },
+
+                ]
+    
+  }),
+})
+</script>
+
 <template>
 <div class = "cont">
   <router-link to="/buy">
@@ -13,143 +79,147 @@
   </router-link>
 
   <div class="pillArea">
-    <div class = "pill">
-      
+    <div class = "pill1">
+      FREE TO PLAY
     </div>
     <div class = "pill">
-      
+      RPG
     </div>
     <div class = "pill">
-      
+      ROLE PLAYING
     </div>
     <div class = "pill">
-      
+      JRPG
     </div>
     <div class = "pill">
-      
+      RACING
     </div>
     <div class = "pill">
-      
+      STORY
     </div>
     <div class = "pill">
-      
+      MMO
     </div>
     <div class = "pill">
-      
+      SANDBOX
     </div>
     <div class = "pill">
-      
+      LAN
     </div>
-    <div class = "pill">
-      
-    </div>
-    <div class = "pill">
-      
-    </div>
-    <div class = "pill">
-      
-    </div>
+
+  </div>
+
+  <div class = "heading">
+    FREE TO PLAY
   </div>
 
   <div class="boxcont">
-  <div class = "threeBox">
-    <div class = "box1">
-      <span class="img-description">
-        <h2 style="color: white; display:grid; justify-content: center; ">
-          Dishonred 2
-        </h2>
-        <p style="padding: 5px; color: white; text-align:center; font-family: 'Inter', sans-serif;">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciunt atque. Facere magnam sed laboriosam voluptatum, expedita nemo fugit ipsa ullam tempore autem
-        </p>
-      </span>
-    </div>
-
-
-    <div class = "box2">
-      <span class="img-description">
-        <h2 style="color: white; display:grid; justify-content: center; ">
-          CyberPunk 2077
-        </h2>
-        <p style="padding: 5px; color: white; text-align:center; font-family: 'Inter', sans-serif;">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciunt atque. Facere magnam sed laboriosam voluptatum, expedita nemo fugit ipsa ullam tempore autem
-        </p>
-      </span>
-    </div>
-
-
-    <div class = "box3">
-      <span class="img-description">
-        <h2 style="color: white; display:grid; justify-content: center; ">
-          Rust
-        </h2>
-        <p style="padding: 5px; color: white; text-align:center; font-family: 'Inter', sans-serif;">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciunt atque. Facere magnam sed laboriosam voluptatum, expedita nemo fugit ipsa ullam tempore autem
-        </p>
-      </span>
-    </div>
-
+    <Carousel v-bind="settings" :breakpoints="breakpoints" :wrap-around="true">
+      <Slide v-for="(image) in  images" :key="image.id">
+        <div class="carousel__item"> 
+          <img class="carousel__item" :src="image.thumb"> 
+        </div>
+      </Slide>
+  
+      <template #addons>
+        <Navigation />
+      </template>
+    </Carousel>
   </div>
 
-
-  </div>
-
-  <div class = "textcont">
-    <div class = "textContainer1">
-
-      <span>Dishonred 2</span><br>
-      <div class = "button1">
-        <p> $39.99 </p>
-      </div>
-    </div>
-    <div class = "textContainer2">
-      <span>CyberPunk 2077</span><br>
-
-      <div class = "button1">
-
-        <p> $59.99 </p>
-      </div>
-    </div>
-    <div class = "textContainer3">
-      <span>Rust</span><br>
-
-      <div class = "button1">
-        <p> $39.99 </p>
-      </div>
-    </div>
+  <div class = "heading">
+    RECOMENDED
   </div>
   <div class ="saleCont">
     <div class = "sale">
-      
     </div>
     <div class = "stackedSale">
         <div class = "stacked"></div>
-        <div class = "stacked"></div>
-        <div class = "stacked"></div>
-        <div class = "stacked"></div>
+        <div class = "stacked1"></div>
+        <div class = "stacked2"></div>
+        <div class = "stacked3"></div>
 
     </div>
   </div>
+  <div class = "heading">
+    RPG
+  </div>
 
+  <div class="boxcont">
+    <Carousel v-bind="settings" :breakpoints="breakpoints" :wrap-around="true">
+      <Slide v-for="(image) in  images" :key="image.id">
+        <div class="carousel__item"> 
+          <img class="carousel__item" :src="image.thumb"> 
+        </div>
+      </Slide>
+  
+      <template #addons>
+        <Navigation />
+      </template>
+    </Carousel>
+  </div>
   </div>
 </template>
+<style>
+.carousel__item {
+  width: 200px;
+  height: 250px;
+  background-color: red;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 10px;
+}
+.carousel__slide{
+  width: 100px;
 
+}
+.carousel__viewport {
+  overflow: hidden;
+  width: 900px;
+}
+
+.carousel__prev, .carousel__next {
+  margin: 0 -40px;
+  color: #D9D9D9;
+
+}
+</style>>
 
 
 <style scoped>
+.heading{
+  color:white;
+  font-family: 'Rubik', sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  display: flex;
+  width:1000px;
+  margin-left: 300px;
+  margin-top: 15px;
+}
 .pillArea{
   width: 900px;
   margin-top: 35px;
   display: flex;
   margin-left: 200px;
-  gap:12.5px
+  gap:20px;
 }
-
-.pill{
-
-  background-color: #D9D9D9;
+.pill1{
+  color:rgb(255, 255, 255);
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
   height: 25px;
-  width: 60px;
-  border-radius: 15px;
+  text-decoration: underline;
+  cursor: default;
+  
+}
+.pill{
+  color:rgb(168, 168, 168);
+  font-size: 11px;
+  font-family: 'Inter', sans-serif;
+  height: 25px;
+  cursor: pointer;
+
 }
 .saleCont{
   width: 900px;
@@ -158,9 +228,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciun
 
   margin-left: 200px;
   margin-bottom: 15px;
+
 }
 .sale{
   background-color: #D9D9D9;
+  background-image: url("../assets/cyberpunk.jpg");
   width: 695px;
   margin-right: 5px;
   height: inherit;
@@ -190,13 +262,35 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatum nesciun
   height: 70px;
   background-color: #D9D9D9;
   border-radius: 15px;
-
+  background-image: url("./imgs/cyberpunk.jpg");
+  background-size: cover;
+}
+.stacked1{
+  width: 200px;
+  height: 70px;
+  background-color: #D9D9D9;
+  border-radius: 15px;
+  background-image: url("./imgs/dis.jpg");
+  background-size: cover;
+}
+.stacked2{
+  width: 200px;
+  height: 70px;
+  background-color: #D9D9D9;
+  border-radius: 15px;
+  background-image: url("./imgs/rust.jpg");
+  background-size: cover;
+}
+.stacked3{
+  width: 200px;
+  height: 70px;
+  background-color: #D9D9D9;
+  border-radius: 15px;
+  background-image: url("./imgs/castle.jpg");
+  background-size: cover;
 }
 .textcont{
   margin-left: 200px;
-
-
-
 }
 div{
   animation: fadeIn .5s;
@@ -226,6 +320,7 @@ div{
     margin-top: 25px;
     display: flex;
     margin-left: 200px;
+    margin-bottom: 25px;
   }
   .textArea{
     display: flex;

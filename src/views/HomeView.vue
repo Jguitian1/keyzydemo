@@ -32,33 +32,33 @@ export default defineComponent({
       },
     },
     images: [
-                    {
-                        id: '1',
-                        big: "https://cdn.cloudflare.steamstatic.com/steam/apps/204360/ss_57cdabd9ae140e33c5551ee0088d1e5db11b4622.1920x1080.jpg?t=1666985972",
-                        thumb: "https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg"
-                    },
-                    {
-                        id: '2',
-                        big: 'https://static.kinguin.net/cdn-cgi/image/w=1140,q=80,fit=scale-down,f=auto/media/category/2/-/2-1024_457.jpg',
-                        thumb: 'https://static-cdn.jtvnw.net/ttv-boxart/263490_IGDB-272x380.jpg'
-                    },
-                    {
-                        id: '3',
-                        big: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_9cf7ff6ba267da33e140f66c29f50fd2ed391da2.1920x1080.jpg?t=1666985972',
-                        thumb: 'https://image.api.playstation.com/vulcan/ap/rnd/202009/2918/1UfdyQmXpeSdoFE104sNkLd4.png'
-                    },
-                    {
-                        id: '4',
-                        big: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_a6a154f004bd7d0c3c7c1a0b378216ce0e8c8dd2.1920x1080.jpg?t=1666985972',
-                        thumb: 'https://store-images.s-microsoft.com/image/apps.13950.70702278257994163.eb8febd9-1124-4e74-9587-d5082fbfffb5.5422b74c-3e78-408f-8df6-9a88c288b704'
-                    },
-                    {
-                        id: '5',
-                        big: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_2f53c16cb83d492cae0421ca090d2591f863e448.1920x1080.jpg?t=1666985972',
-                        thumb: 'https://image.api.playstation.com/vulcan/ap/rnd/202206/0300/E2vZwVaDJbhLZpJo7Q10IyYo.png'
-                    },
+            {
+                id: '1',
+                big: "https://cdn.cloudflare.steamstatic.com/steam/apps/204360/ss_57cdabd9ae140e33c5551ee0088d1e5db11b4622.1920x1080.jpg?t=1666985972",
+                thumb: "https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg"
+            },
+            {
+                id: '2',
+                big: 'https://static.kinguin.net/cdn-cgi/image/w=1140,q=80,fit=scale-down,f=auto/media/category/2/-/2-1024_457.jpg',
+                thumb: 'https://static-cdn.jtvnw.net/ttv-boxart/263490_IGDB-272x380.jpg'
+            },
+            {
+                id: '3',
+                big: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_9cf7ff6ba267da33e140f66c29f50fd2ed391da2.1920x1080.jpg?t=1666985972',
+                thumb: 'https://image.api.playstation.com/vulcan/ap/rnd/202009/2918/1UfdyQmXpeSdoFE104sNkLd4.png'
+            },
+            {
+                id: '4',
+                big: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_a6a154f004bd7d0c3c7c1a0b378216ce0e8c8dd2.1920x1080.jpg?t=1666985972',
+                thumb: 'https://store-images.s-microsoft.com/image/apps.13950.70702278257994163.eb8febd9-1124-4e74-9587-d5082fbfffb5.5422b74c-3e78-408f-8df6-9a88c288b704'
+            },
+            {
+                id: '5',
+                big: 'https://cdn.akamai.steamstatic.com/steam/apps/204360/ss_2f53c16cb83d492cae0421ca090d2591f863e448.1920x1080.jpg?t=1666985972',
+                thumb: 'https://image.api.playstation.com/vulcan/ap/rnd/202206/0300/E2vZwVaDJbhLZpJo7Q10IyYo.png'
+            },
 
-                ]
+            ]
     
   }),
 })
@@ -161,6 +161,9 @@ export default defineComponent({
   </div>
 </template>
 <style>
+body{
+  overflow-x: hidden;
+}
 .carousel__item {
   width: 200px;
   height: 250px;
